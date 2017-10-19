@@ -1,0 +1,29 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset=utf-8" />
+    <title></title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <style>
+        button{display: block;}
+    </style>
+</head>
+
+<body>
+<textarea name="" id="text" cols="40" rows="10" placeholder="请输入内容..."></textarea>
+<button id="btn">提交</button>
+</body>
+<script type="text/javascript">
+    $(function () {
+        $('#text').keyup(function () {
+            var txt_val = $("#text").val().length;
+            if (txt_val > 6) {
+                $("#btn").attr("disabled", true);
+                alert('提交失败')
+            } else {
+                $("#btn").attr("disabled", false)
+            }
+        })
+    })
+</script>
+</html>
